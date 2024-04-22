@@ -23,6 +23,7 @@ io.on("connection", (socket) => {
 
   socket.on('request-update-dashboard', (payload) => {
     logger.info(`[SOCKET ON] request-update-dashboard: ${payload}`)
+    // console.log(`[SOCKET ON] request-update-dashboard:`, payload)
     // emit payload
     io.emit('update-dashboard', payload)
     // on disconnected
